@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thomas Deketelaere</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-neutral-50 text-neutral-900 font-sans text-white/90">
+        <nav class="fixed w-full z-50 top-0 left-0 bg-black/50 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between ">
+                <!-- Logo / Name -->
+                <div class="text-white text-2xl font-bold">About me</div>
+
+                <!-- Navigation Links (desktop) -->
+                <ul class="hidden md:flex space-x-8 text-white">
+                <li><a href="index.html" class="hover:text-gray-300 transition">Home</a></li>
+                <li><a href="fullgallery.html" class="hover:text-gray-300 transition">Gallery</a></li>
+                <li><a href="about.html" class="hover:text-gray-300 transition">About</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300 transition">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Hamburger -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <!-- Simple hamburger icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="flex flex-col items-center space-y-4 py-4 text-white">
+                    <li><a href="index.html" class="hover:text-gray-300 transition">Home</a></li>
+                    <li><a href="fullgallery.html" class="hover:text-gray-300 transition">Gallery</a></li>
+                    <li><a href="about.html" class="hover:text-gray-300 transition">About</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-300 transition">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative h-screen w-full">
+            <!-- Background Image -->
+            <div class="absolute inset-0">
+                <img src="../images/top-page/top_img03.JPG" alt="Hero" class="w-full h-full object-cover brightness-75"/>
+                <!-- optional: brightness or blur makes text pop -->
+            </div>
+
+            <!-- Text Overlay -->
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 backdrop-blur-sm">
+                <h1 class="text-5xl md:text-6xl font-bold text-white/80 drop-shadow-lg mb-4 ">About me</h1>
+                <p class="text-xl md:text-2xl text-white/60 drop-shadow-md">Where stories of passion and purpose unfold, revealing the heart behind the lens.</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-16 px-6 md:px-16 bg-neutral-900 text-white/90">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+                <p class="mb-4">Hey! I’m Thomas, 24, a wedding photographer based in Antwerp. I started taking photos simply because I loved capturing moments that tell a story, and somewhere along the way it became my mission to celebrate every love story in all its magic and uniqueness.</p>
+                <p class="mb-4">Every wedding is different, and I love capturing the little sparks, quiet glances, and big, messy moments that make yours unforgettable. I specialize in diversity (neurodivergence, LGBTQ+ couples, and beyond) and I welcome anyone and everyone to be celebrated through my lens.</p>
+                <p>When I’m not behind the camera, you’ll find me at my PC, exploring new corners of the world, or curled up with my cat, Nala.</p>
+                <br/><br/>
+                <p class="mb-4">I’m always up for a chat, so if you have any questions or just want to say hi, feel free to reach out!
+                    <br/>You can find me on <a href="https://www.instagram.com/marriedbythomas/" class="text-blue-400 hover:underline">wedding Instagram profile</a> or <a href="https://www.instagram.com/thomasdeketelaere/" class="text-blue-400 hover:underline">on my main profile</a>.
+                </p>
+                <br/><p class="mb-4">Thanks for stopping by, and I can’t wait to capture your story!</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 bg-neutral-900 text-sm text-gray-400">
+            &copy; 2025 - Thomas Deketelaere. All rights reserved.
+            <br/><br/>This is a personal portfolio website showcasing my photography work. All images are my own unless otherwise stated. 
+            <br/>Anyone portrayed is with full consent from the person or parents. If you have any concerns or requests regarding the use of images, please contact me directly.
+        </footer>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox flex items-center z-[9999] justify-center">
+            <img src="" alt="Expanded Photo" id="lightbox-img" />
+        </div>
+        
+        <script src="../scripts/lightbox.js"></script>
+        <script src="../scripts/image-protection.js"></script>
+        <script src="../scripts/nav.js"></script>
+        <script src="../scripts/gallery.js"></script>
+    </body>
+</html>
