@@ -4,21 +4,64 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Thomas Deketelaere</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <header>
-
-        </header>
-
-        <section>
-            
+    <body class="bg-neutral-50 text-neutral-900 font-sans">
+        <!-- Hero Section -->
+        <section class="h-screen flex flex-col justify-center items-center text-center bg-neutral-900 text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Thomas Deketelaere</h1>
+            <p class="text-xl md:text-2xl mb-8">Insert fancy text</p>
+            <a href="#gallery" class="px-6 py-3 bg-white text-neutral-900 font-semibold rounded-full shadow-lg hover:bg-neutral-200 transition">View My Work</a>
         </section>
 
-        <footer>
-            <div>
-                <p>&copy; 2025 Your Photography Brand. All rights reserved.</p>
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 px-6 md:px-16">
+        <h2 class="text-4xl font-bold text-center mb-12">Gallery</h2>
+        <div class="grid gap-6 grid-cols-[repeat(auto-fit,minmax(400px,auto))] justify-center">
+            <!-- Replace with your images -->
+            <div class="aspect-[3/4] rounded-xl transform transition duration-300 hover:scale-105 gallery-img-parent">
+                <img src="images/front-page/img01.jpeg" alt="Photo 1" class="w-full h-full object-cover gallery-img lightbox-trigger"/>
             </div>
+            <div class="aspect-[3/4] rounded-xl transform transition duration-300 hover:scale-105 gallery-img-parent">
+                <img src="https://picsum.photos/600/800?random=2" alt="Photo 2" class="w-full h-full object-cover gallery-img lightbox-trigger" />
+            </div>
+            <div class="aspect-[3/4] rounded-xl transform transition duration-300 hover:scale-105 gallery-img-parent">
+                <img src="https://picsum.photos/600/800?random=3" alt="Photo 3" class="w-full h-full object-cover gallery-img lightbox-trigger" />
+            </div>
+            <div class="aspect-[3/4] rounded-xl transform transition duration-300 hover:scale-105 gallery-img-parent">
+                <img src="https://picsum.photos/600/800?random=4" alt="Photo 4" class="w-full h-full object-cover gallery-img lightbox-trigger" />
+            </div>
+            <div class="aspect-[3/4] rounded-xl transform transition duration-300 hover:scale-105 gallery-img-parent">
+                <img src="https://picsum.photos/600/800?random=5" alt="Photo 5" class="w-full h-full object-cover gallery-img lightbox-trigger" />
+            </div>
+            <div class="aspect-[3/4] rounded-xl transform transition duration-300 hover:scale-105 gallery-img-parent">
+                <img src="https://picsum.photos/600/800?random=6" alt="Photo 6" class="w-full h-full object-cover gallery-img lightbox-trigger" />
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-neutral-900 text-white py-16 px-6 md:px-16">
+            <h2 class="text-4xl font-bold text-center mb-12">Get in Touch</h2>
+            <form class="max-w-xl mx-auto space-y-6">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-neutral-900" required />
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg text-neutral-900" required />
+            <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg text-neutral-900" required></textarea>
+            <button type="submit" class="w-full px-6 py-3 bg-white text-neutral-900 font-semibold rounded-lg shadow-lg hover:bg-neutral-200 transition">Send</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 text-neutral-500 text-sm">
+            &copy; 2025 - Thomas Deketelaere. All rights reserved.
         </footer>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox flex items-center justify-center">
+            <img src="" alt="Expanded Photo" id="lightbox-img" />
+        </div>
+        <script src="scripts/lightbox.js"></script>
     </body>
 </html>
